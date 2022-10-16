@@ -1,8 +1,8 @@
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
-prompt = "Hello world"
+prompt = "What is your name?"
 
 response = openai.Completion.create(engine="text-davinci-001", prompt=prompt, max_tokens=6)
 
