@@ -7,3 +7,5 @@ prompt = "What is your name?"
 response = openai.Completion.create(engine="text-davinci-001", prompt=prompt, max_tokens=6)
 
 print(response)
+
+#Test
