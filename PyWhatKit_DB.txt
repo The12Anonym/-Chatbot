@@ -1,0 +1,25 @@
+Date: 27/10/2022
+Time: 19:4
+Phone Number: +41789306650
+Message: HALLO ICH BIN VIA PYTHON VERSCHICKT WORDEN
+--------------------
+Date: 27/10/2022
+Time: 19:16
+Group ID: FAeViwKj6bD1KG1hGssFo9
+Message: HALLO ICH BIN VIA PYTHON VERSCHICKT WORDEN
+--------------------
+Date: 27/10/2022
+Time: 19:20
+Group ID: FAeViwKj6bD1KG1hGssFo9
+Message: Gruppennachricht 2
+--------------------
+Date: 27/10/2022
+Time: 19:21
+Group ID: FAeViwKj6bD1KG1hGssFo9
+Message: Gruppennachricht 2
+--------------------
+Date: 27/10/2022
+Time: 19:44
+Group ID: FAeViwKj6bD1KG1hGssFo9
+Message: Ich bin eine Scheiss Python Libary, weil ich nur WhatsApp nachrichten versenden kann, aber keine Nachrichten lesen kann.
+--------------------

@@ -1,9 +1,9 @@
 import openai
-import constants
+import constants as c
 import ai
 
-openai.api_key = constants.OPEN_API_KEY
-name = constants.NAME
+openai.api_key = c.OPEN_API_KEY
+name = c.NAME
 prompt = ""
 
 print("Hello my name is " + name)
