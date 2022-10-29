@@ -1,9 +1,15 @@
 import openai
+import constants
+import ai
 
-openai.api_key = "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"
+openai.api_key = constants.OPEN_API_KEY
+name = constants.NAME
+prompt = ""
 
-prompt = "What is your name?"
+print("Hello my name is " + name)
+print("Please ask me anything")
 
-response = openai.Completion.create(engine="text-davinci-001", prompt=prompt, max_tokens=6)
-
-print(response)
+while (prompt != "exit"):
+    prompt = input()
+    openAiObject = ai.openApiCall(prompt)
+    print(ai.getText(openAiObject))
