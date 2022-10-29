@@ -1,4 +1,6 @@
-with open("C:/Users/muria/Downloads/data_prep_clean.csv", "rb") as f: #f steht für file
+import constants as c
+
+with open(c.FILE_PATH, "rb") as f: #f steht für file
     lines = f.readlines()
 
 results = []
