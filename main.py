@@ -1,6 +1,6 @@
 import openai
 import constants as c
-import ai
+import api
 
 openai.api_key = c.OPEN_API_KEY
 name = c.NAME
@@ -11,5 +11,5 @@ print("Please ask me anything")
 
 while (prompt != "exit"):
     prompt = input()
-    openAiObject = ai.openApiCall(prompt)
-    print(ai.getText(openAiObject))
+    openAiObject = api.openApiCall(prompt)
+    print(api.getText(openAiObject))
