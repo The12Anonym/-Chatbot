@@ -1,19 +1,26 @@
 import openai
 import constants as c
 import program.api as api
+import program.conversation as conv
 
 openai.api_key = c.OPEN_API_KEY
-name = c.NAME
-prompt = ""
+
+userPromt = ""
 
 userPrompts = []
 botPrompts = []
 
 if (c.MODEL_STARTS_CONVO):   
-    print("Hello, how are you?")
-    botPrompts.append()
+    print(c.MODEL_STARTING_PROMPT)
+    botPrompts.append(c.MODEL_STARTING_PROMPT)
 
-while (prompt != "exit"):
-    prompt = input()
-    openAiObject = api.openApiCall(prompt)
-    print(api.getText(openAiObject))
+while (userPromt != "exit"):
+    userPromt = input()
+    userPrompts.append(userPromt)
+
+    prompt = conv.CreateConvoString(userPrompts, botPrompts)
+
+    botPromptObject = api.openApiCall(prompt)
+    botPromt = api.getText(botPromptObject)
+    print(botPromt)    
+    botPrompts.append(botPromt)

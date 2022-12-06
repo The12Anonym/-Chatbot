@@ -1,19 +1,18 @@
 import openai
 import constants as c
 
-ApiName=c.MODEL_CHOSEN
-ApiModel=c.MODELS[ApiName]
+ApiModel=c.MODELS[c.MODEL_CHOSEN]
 
-def openApiCall(prompt):
+def openApiCall(convo):
     response = openai.Completion.create(
         model=ApiModel,
-        prompt="You: Hello\nFriend: How are you?.\nYou: Good, and you?\nFriend:",
+        prompt=convo,
         temperature=c.MODEL_TEMPERATURE,
         max_tokens=c.MODEL_MAX_TOKENS,
         top_p=1.0,
         frequency_penalty=0.5,
         presence_penalty=0.0,
-        stop=["You:"])
+        stop=["B:"])
     return response
 
 def getText(openAiObject):
