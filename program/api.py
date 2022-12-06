@@ -1,25 +1,20 @@
 import openai
 import constants as c
 
+ApiName=c.MODEL_CHOSEN
+ApiModel=c.MODELS[ApiName]
+
 def openApiCall(prompt):
-    #response = openai.Completion.create(
-        #engine=c.MODEL, 
-       #prompt=prompt, 
-       # temperature=0, #0=no risk, 1=full confident
-       # max_tokens=100)
     response = openai.Completion.create(
-        model=c.MODEL,
+        model=ApiModel,
         prompt="You: Hello\nFriend: How are you?.\nYou: Good, and you?\nFriend:",
-        temperature=0.5,
-        max_tokens=60,
+        temperature=c.MODEL_TEMPERATURE,
+        max_tokens=c.MODEL_MAX_TOKENS,
         top_p=1.0,
         frequency_penalty=0.5,
         presence_penalty=0.0,
         stop=["You:"])
     return response
-
-
-
 
 def getText(openAiObject):
     if (len(openAiObject.choices) == 1):
